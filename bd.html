@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Plata Fácil - Servicios Financieros</title>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- cabecera -->
+        <header class="cabecera">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="#" title="Plata Fácil - Servicios Financieros">
+                    <img src="img/logo.png" alt="PlataFácil" title="PlataFácil" width="64" height="64">
+                    PlataFácil
+                </a>
+            </div>
+            <!-- fin logo -->
+
+            <!-- menu -->
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <!-- fin menu -->
+
+        </header>
+        <!-- fin cabecera -->
+
+        <!-- Contenido -->
+        <main class="contenidos">
+
+
+            <!-- Destacados: Servicios -->
+            <h2>ABM de CLIENTES y PRESTAMOS</h2>
+            <form class="formulario" id="formulario">
+
+                <!-- Grupo: Nombre -->
+                <div class="formulario_grupo" id="grupo_nombre">
+                    <label for="nombre" class="formulario_label">Nombre*</label>
+                    <div class="formulario_grupo-input">
+                        <input type="text" class="formulario_input" name="nombre" id="nombre" size="35"
+                            placeholder="Juan" required>
+                        <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input-error">El nombre deben ser solamente letras.</p>
+                </div>
+                <!-- Grupo: Apellido -->
+                <div class="formulario_grupo" id="grupo_apellido">
+                    <label for="apellido" class="formulario_label">Apellido *</label>
+                    <div class="formulario_grupo-input">
+                        <input type="text" class="formulario_input" size="15" maxlength="15" name="apellido"
+                            id="apellido" placeholder="Perez" required>
+                        <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input-error">El apellido deben ser solamente letras.</p>
+                </div>
+                <!-- Grupo: Tipo Documento -->
+                <div class="formulario_grupo" id="grupo_documento">
+                    <label for="tipo_documento" class="formulario_label">Tipo de documento</label>
+                    <div class="formulario_grupo-input">
+                        <select class="select" name="documento" id="tipo_documento" required>
+                            <option value="">Seleccione una opcion</option>
+                            <option value="DNI">DNI</option>
+                            <option value="LE">LE</option>
+                            <option value="LC">LC</option>
+                            <option value="PAS">Pasaporte</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Grupo: Numero Documento -->
+                <div class="formulario_grupo" id="grupo_documento">
+                    <label for="documento" class="formulario_label">Nro. documento *</label>
+                    <div class="formulario_grupo-input">
+                        <input type="text" class="formulario_input" maxlength="8" name="documento" id="documento"
+                            size="9" placeholder="12345678" required>
+                        <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input-error">Seleccione un tipo de documento y escriba el nro. de documento
+                        debe escribirse sin puntos ni espacios</p>
+                </div>
+
+                <!-- Grupo: Nro Pasaporte -->
+                <div class="formulario_grupo" id="grupo_monto">
+                    <label for="monto" class="formulario_label">Monto del préstamo</label>
+                    <div class="formulario_grupo-input">
+                        <input type="number" class="formulario_input" maxlength="8" name="monto" placeholder="99999999"
+                            size="9" id="monto">
+                        <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input-error">Coloque el monto del préstamo sin puntos ni comas</p>
+                </div>
+
+                <!-- Grupo: Fecha de otorgamiento -->
+                <div class="formulario_grupo" id="grupo_otorgamiento">
+                    <label for="otorgamiento" class="formulario_label">Fecha de otorgamiento</label>
+                    <div class="formulario_grupo-input">
+                        <input type="date" class="formulario_input" name="otorgamiento" id="otorgamiento">
+                        <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input-error">Coloque la fecha en la que se otorgó el préstamo.</p>
+                </div>
+                <!-- Grupo: Fecha de vencimiento -->
+                <div class="formulario_grupo" id="grupo_vto">
+                    <label for="vencimiento" class="formulario_label">Fecha de vencimiento del préstamo</label>
+                    <div class="formulario_grupo-input">
+                        <input type="date" class="formulario_input" name="vencimiento" id="vencimiento">
+                        <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario_input-error">Coloque la fecha en la que se vence el plazo de devolución del
+                        préstamo.</p>
+                </div>
+                <!-- Grupo: Estado del préstamo -->
+                <div class="formulario_grupo" id="grupo_estado">
+                    <label for="estado" class="formulario_label">Estado del préstamo</label>
+                    <div class="formulario_grupo-input">
+                        <select class="select" name="estado" id="estado">
+                            <option value="">Seleccione una opcion</option>
+                            <option value="ACT">ACTIVO</option>
+                            <option value="VDO">VENCIDO</option>
+                            <option value="PEND">PENDIENTE</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- SUBIR ARCHIVO-->
+                <div class="formulario_grupo" id="grupo_file">
+                    <label for="foto" class="formulario_label">Adjunte foto del frente de su documento</label>
+                    <input type="file" class="formulario_input" id="foto">
+                </div>
+                <!-- Boton -->
+                <div class="formulario_mensaje" id="formulario_mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Verifique que todos los campos estén
+                        completos y correctos.</p>
+                </div>
+                <div class="formulario_grupo formulario_grupo-btn">
+                    <button type="submit" class="formulario_btn">Enviar</button>
+                    <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado
+                        exitosamente!
+                        Dentro de las próximas 48hs. nos estaremos comunicando con usted.
+                    </p>
+                </div>
+                <div class="formulario_label">* Campo Obligatorio</div>
+            </form>
+
+            </section>
+
+            <!-- Fin Destacados: Servicios -->
+
+            <!-- Destacados: Objetivos -->
+
+        </main>
+        <!-- fin contenido -->
+
+
+    </div>
+
+    <footer class="pie">
+        <div class="logo-pie">
+            <a href="#" title="Plata Fácil">
+                <img src="img/logo.png" alt="Plata Fácil" title="Plata Fácil" width="32" height="32">
+                PlataFácil
+            </a>
+        </div>
+
+
+        <div class="info-footer">
+
+            <div class="menu">
+                <h3>| PRODUCTOS</h3>
+                <ul>
+                    <li><a href="servicios.html">» Tarjetas Credito/Debito</a></li>
+                    <li><a href="servicios.html">» Cuenta Sueldo </a></li>
+                    <li><a href="servicios.html">» Plazo Fijo</a></li>
+                    <li><a href="servicios.html">» Prestamos</a></li>
+                    <li><a href="servicios.html">» Tipo de Cambio</a></li>
+                </ul>
+            </div>
+
+            <div class="ayuda">
+                <h3>| INSTITUCION</h3>
+                <ul>
+                    <li><a href="nosotros.html">» Sobre Nosotros</a></li>
+                    <li><a href="nosotros.html">» Objetivos</a></li>
+                    <li><a href="nosotros.html">» Nuestro Equipo</a></li>
+                </ul>
+            </div>
+
+            <div class="legales">
+                <h3>| LEGALES</h3>
+                <ul>
+                    <li><a href="nosotros.html">» Privacidad</a></li>
+                    <li><a href="nosotros.html">» Seguridad</a></li>
+                    <li><a href="nosotros.html">» TyC</a></li>
+                    <li><a href="contactos.html">» Contacto</a></li>
+                </ul>
+            </div>
+
+
+            <div class="rrss">
+                <h3>| REDES SOCIALES</h3>
+                <span style="font-size: 2.7em">
+                    <a href="fb.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="ig.me" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                    <a href="x.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="youtu.be" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </span>
+            </div>
+
+
+        </div>
+
+
+
+
+    </footer>
+    <script src="./js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
